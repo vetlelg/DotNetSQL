@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "5dJe5kKB9Be/aNOqswNU7Q9AkdWCFFm3Dy9mLHp4Egw=",
+  "Source": "DotNetSQL",
+  "BasePath": "_content/DotNetSQL",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
