@@ -16,19 +16,19 @@ builder.Services.AddDbContext<BlogContext>(options => options.UseSqlServer(conne
 
 var app = builder.Build();
 
-app.MapGet("https://vetlelgwebapi.azurewebsites.net/", () => "Hello World!");
+app.MapGet("/", () => "Hello World!");
 
-app.MapGet("https://vetlelgwebapi.azurewebsites.net/Blog", (BlogContext context) => context.Blogs.ToList())
+app.MapGet("/Blog", (BlogContext context) => context.Blogs.ToList())
 .WithName("GetBlogs");
 
-app.MapPost("https://vetlelgwebapi.azurewebsites.net/Blog", (Blog blog, BlogContext context) =>
+app.MapPost("/Blog", (Blog blog, BlogContext context) =>
 {
     context.Add(blog);
     context.SaveChanges();
 })
 .WithName("CreateBlog");
 
-app.MapPost("https://vetlelgwebapi.azurewebsites.net/Post", (Post post, BlogContext context) =>
+app.MapPost("/Post", (Post post, BlogContext context) =>
 {
     context.Add(post);
     context.SaveChanges();
